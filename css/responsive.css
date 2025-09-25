@@ -23,6 +23,18 @@
     transform-origin: 1px;
 }
 
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -134,17 +146,5 @@
 
     section h2 {
         font-size: 1.5rem;
-    }
-
-    .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-
-    .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
     }
 }
