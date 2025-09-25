@@ -98,7 +98,7 @@ body {
 /* Hero section */
 .hero {
     height: 100vh;
-    background: url('DSC_1458.jpg') center center/cover no-repeat;
+    background: url('../images/DSC_1458.jpg') center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: flex-start;

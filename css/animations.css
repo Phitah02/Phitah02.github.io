@@ -1,0 +1,84 @@
+/* Fade-in animations for sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggered animation for project items */
+.project-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: calc(var(--order) * 0.1s);
+}
+
+/* Hover effects for interactive elements */
+.project-item,
+.interest-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover,
+.interest-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Pulse animation for contact button */
+#contact button {
+    transition: all 0.3s ease;
+}
+
+#contact button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(56, 239, 125, 0.4);
+}
+
+/* Rotating gear icon */
+.gear-icon {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bouncing icons */
+.about-icon,
+.education-icon,
+.interests-icon,
+.projects-icon,
+.contact-icon {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Navbar background change on scroll */
+.navbar.scrolled {
+    background-color: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+}
